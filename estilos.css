@@ -1,0 +1,253 @@
+	@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap");
+	/* Estilos generales */
+	* {
+		box-sizing: border-box; /* Aplica el modelo de caja de borde a todos los elementos */
+		font-family: 'Montserrat Alternates', sans-serif; /* Define la fuente principal para todos los elementos */
+	}
+		/*tarjetas*/
+	.cards{
+		display: flex;
+		flex-flow: row wrap;
+		box-sizing: border-box;
+		justify-content: center;
+		align-content: flex-start;
+				
+		
+	}
+	.card{
+		margin: 50px;
+		border: 3px solid black;
+		
+		align-self: center;
+		
+		
+	}
+	.principal1{
+		width: 200px;
+		
+	}
+	.principal2{
+		height: 120px;
+		width: 200px;
+	}
+		/* boton tarjetas*/
+		.btn{ 
+			background-color: #3e2ecc; /* Color de fondo del botón */
+			color: #fff; /* Color del texto del botón */
+			text-decoration: none;
+			
+		}
+
+
+	.Principal {
+		margin-top: 100px; /* Margen superior para el elemento con clase Principal */
+		text-align: center; /* Texto centrado */
+		font-size: 15px; /* Tamaño de fuente */
+	}
+	
+	.capa {
+		position: fixed; /* Posición fija en la ventana */
+		width: 100%; /* Ancho completo */
+		height: 100vh; /* Altura completa de la ventana */
+		background: rgba(0, 0, 0, 0.1); /* Fondo semi-transparente negro */
+		z-index: -1; /* Coloca la capa detrás de otros elementos */
+		top: 0;
+		left: 0;
+	}
+	
+	/* Estilos para el encabezado */
+	.header {
+		width: 100%; /* Ancho completo */
+		height: 100px; /* Altura fija */
+		position: fixed; /* Encabezado fijo en la parte superior */
+		top: 0;
+		left: 0;
+	}
+	
+	.container {
+		width: 90%; /* Ancho del contenedor del encabezado */
+		max-width: 1200px; /* Ancho máximo del contenedor */
+		margin: auto; /* Centra el contenedor */
+	}
+	
+	.container .titulo {
+		text-align: center; /* Texto centrado en el contenedor */
+	}
+	
+	.container .btn-menu,
+	.logo {
+		float: left; /* Alinea elementos a la izquierda */
+		line-height: 100px; /* Altura de línea igual a la altura del encabezado */
+	}
+	
+	.container .btn-menu label {
+		color: black; /* Color del texto del botón de menú */
+		font-size: 25px; /* Tamaño de fuente del botón de menú */
+		cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+	}
+	
+	.logo h1 {
+		color: #000; /* Color del texto del logotipo */
+		font-weight: 400; /* Grosor de la fuente */
+		font-size: 22px; /* Tamaño de fuente del logotipo */
+		margin-left: 10px; /* Margen izquierdo */
+		margin-top: 1px; /* Margen superior */
+	}
+	
+	.container .menu {
+		float: right; /* Alinea el menú a la derecha */
+		line-height: 100px; /* Altura de línea igual a la altura del encabezado */
+	}
+	
+	.container .menu a {
+		display: inline-block; /* Hace que los elementos del menú sean bloques en línea */
+		padding: 15px; /* Relleno interno */
+		line-height: normal; /* Restaura la altura de línea normal */
+		text-decoration: none; /* Sin decoración de texto */
+		color: black; /* Color del texto del menú */
+		transition: all 0.3s ease; /* Animación de transición suave */
+		border-bottom: 2px solid transparent; /* Borde inferior transparente */
+		font-size: 15px; /* Tamaño de fuente del menú */
+		margin-right: 5px; /* Margen derecho entre elementos del menú */
+	}
+	
+	.container .menu a:hover {
+		border-bottom: 2px solid #c7c7c7; /* Cambia el color del borde al pasar sobre el menú */
+		padding-bottom: 5px; /* Añade un espacio alrededor del borde inferior */
+	}
+	/* Fin de Estilos para el encabezado */
+	
+	/* Menú lateral */
+	#btn-menu {
+		display: none; /* Oculta el botón de menú */
+	}
+	
+	.container-menu {
+		position: fixed; /* Posición fija en la ventana */
+		background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+		width: 100%; /* Ancho completo */
+		height: 100vh; /* Altura completa de la ventana */
+		top: 0;
+		left: 0;
+		transition: all 500ms ease; /* Animación de transición suave */
+		opacity: 0; /* Inicialmente invisible */
+		visibility: hidden; /* Inicialmente oculto */
+	}
+	
+	#btn-menu:checked~.container-menu {
+		opacity: 1; /* Hace visible el menú al hacer clic en el botón */
+		visibility: visible;
+	}
+	
+	.cont-menu {
+		width: 100%; /* Ancho completo */
+		max-width: 250px; /* Ancho máximo del menú lateral */
+		background: white; /* Fondo blanco */
+		height: 100vh; /* Altura completa de la ventana */
+		position: relative; /* Posición relativa para ajustar la posición */
+		transition: all 500ms ease; /* Animación de transición suave */
+		transform: translateX(-100%); /* Mueve el menú fuera de la vista inicialmente */
+	}
+	
+	#btn-menu:checked~.container-menu .cont-menu {
+		transform: translateX(0%); /* Muestra el menú al hacer clic en el botón */
+	}
+	
+	.cont-menu nav {
+		transform: translateY(15%); /* Desplaza el menú hacia abajo */
+	}
+	
+	.cont-menu nav a {
+		display: block; /* Hace que los elementos del menú sean bloques */
+		text-decoration: none; /* Sin decoración de texto */
+		padding: 20px; /* Relleno interno */
+		color: #000; /* Color del texto del menú lateral */
+		border-left: 5px solid transparent; /* Borde izquierdo transparente */
+		transition: all 400ms ease; /* Animación de transición suave */
+	}
+	
+	.cont-menu nav a:hover {
+		border-left: 5px solid #c7c7c7; /* Cambia el color del borde al pasar sobre el menú lateral */
+		background: #f3f1f1; /* Cambia el color de fondo al pasar sobre el menú lateral */
+	}
+	
+	.cont-menu label {
+		position: absolute; /* Posición absoluta para ajustar la posición */
+		right: 5px; /* Margen derecho */
+		top: 10px; /* Margen superior */
+		color: #fff; /* Color del texto */
+		cursor: pointer; /* Cambia el cursor al pasar sobre el botón de cierre */
+		font-size: 18px; /* Tamaño de fuente del botón de cierre */
+	}
+	/* Fin de Menú lateral */
+	
+	/* Virtualbox */
+	.centro {
+		text-align: center; /* Texto centrado */
+		margin: 100px; /*margen*/
+	}
+
+
+	.button{
+	    align-items: flex-end; /* Alinea los elementos hacia la derecha  */
+		margin-left: 1000px; /* Margen izquierdo de 1000 píxeles */
+		background-color: #3e2ecc; /* Color de fondo del botón */
+		color: #fff; /* Color del texto del botón */
+		padding: 15px 30px; /* Relleno interno del botón (15 píxeles arriba/abajo, 30 píxeles izquierda/derecha) */
+		text-decoration: none; /* Sin decoración de texto */
+		border-radius: 20px; /* Radio de borde para dar esquinas redondeadas */
+}
+
+	/*Ubuntu*/
+	.ubuntu{
+		text-align: center;
+		margin: 100px;
+	}
+	.picture1{
+		width: 800px;
+		height: 500px;
+	}
+
+	
+	/*sobremi*/
+
+	.imagen11{
+		height: 600px;
+	}
+	.button3{
+		align-items: flex-end; /* Alinea los elementos hacia la derecha  */
+		margin-left: 1000px; /* Margen izquierdo de 1000 píxeles */
+		background-color: #3e2ecc; /* Color de fondo del botón */
+		color: #fff; /* Color del texto del botón */
+		padding: 15px 30px; /* Relleno interno del botón (15 píxeles arriba/abajo, 30 píxeles izquierda/derecha) */
+		text-decoration: none; /* Sin decoración de texto */
+		border-radius: 20px; /* Radio de borde para dar esquinas redondeadas */
+	}
+	/*redNat*/
+	.nat1{
+		text-align: center; /* Texto centrado */
+		margin: 100px; /*margen*/
+	}
+	.button2{
+		align-items: flex-end; /* Alinea los elementos hacia la derecha  */
+		margin-left: 1000px; /* Margen izquierdo de 1000 píxeles */
+		background-color: #3e2ecc; /* Color de fondo del botón */
+		color: #fff; /* Color del texto del botón */
+		padding: 15px 30px; /* Relleno interno del botón (15 píxeles arriba/abajo, 30 píxeles izquierda/derecha) */
+		text-decoration: none; /* Sin decoración de texto */
+		border-radius: 20px; /* Radio de borde para dar esquinas redondeadas */
+	}
+	.samba{
+		text-align: center;
+	}
+	.picture2{
+		width: 800px;
+		
+	}
+
+	/*Windows*/
+	.windowss{
+		text-align: center;
+
+
+	}
