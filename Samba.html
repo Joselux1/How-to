@@ -11,32 +11,32 @@
     <h1>Instalación de SAMBA</h1>
         <p>Para instalar SAMBA, debemos instalar el paquete samba</p>
         <p>Usamos el comando 'su', damos Enter, nos pasamos a root, introducimos la contraseña y cuando estemos en root, ingresamos el comando 'apt upgrade' y presionamos Enter.</p>
-        <img  class ="picture2" src="/samba/apt upgrade.png"  alt="samba1">
+        <img  class ="picture2" src="./samba/apt upgrade.png"  alt="samba1">
         <p>A continuacion usamos el comando apt upgrade y le damos a enter.</p>
-        <img  class ="picture2" src="samba/apt upgrade.png"  alt="samba2">
+        <img  class ="picture2" src="./samba/apt upgrade.png"  alt="samba2">
         <p>Ahora instalamos Samba con el comando 'apt install samba' y le damos Enter.</p>
-        <img  class ="picture2" src="samba/apt install samba.png"  alt="samba3">
+        <img  class ="picture2" src="./samba/apt install samba.png"  alt="samba3">
         <p>Creamos un nuevo usuario para conectarnos y compartir los documentos.</p>
-        <img  class ="picture2" src="samba/Adduser winuser.png"  alt="samba4">
+        <img  class ="picture2" src="./samba/Adduser winuser.png"  alt="samba4">
         <p>Nos logamos como el usuario. Y vamos a su carpeta personal y creamos una nueva “compartida” a la que le damos permisos:</p>
-        <img  class ="picture2" src="samba/comandos para crear la carpeta compartida.png" alt="samba5"><br>
-        <img  class ="picture2" src="samba/chmod777.png" >
+        <img  class ="picture2" src="./samba/comandos para crear la carpeta compartida.png" alt="samba5"><br>
+        <img  class ="picture2" src="./samba/chmod777.png" >
         <p>Como Administrador instalamos vim. El editor de texto plano de Linux.</p>
         <p>Cuando metamos el comando le damos a enter.</p>
-        <img  class ="picture2" src="samba/istalamos vim.png" alt="samba6">
+        <img  class ="picture2" src="./samba/istalamos vim.png" alt="samba6">
         <p>Cuando está instalado, como root editamos con vim el archivo de configuración:</p>
-        <img  class ="picture2" src="samba/editamos el nano.png"  alt="samba7">
+        <img  class ="picture2" src="./samba/editamos el nano.png"  alt="samba7">
         <p>Dentro de Vim vamos al final y escribimos al final del documento (tecla Insert)</p>
-        <img  class ="picture2" src="samba/VIMdentro.png" alt="samba8">
+        <img  class ="picture2" src="./samba/VIMdentro.png" alt="samba8">
         <p>Salimos de vim pulsando escape y escribiendo: wq (write, quit)</p>
         <p>Ahora tenemos que añadir a winuser a los usuarios de samba y ponerle una contraseña (seguimos como root):smbpasswd –a winuser le damos enter y Ahora nos cambiamos al usuario winuser para crear un archivo dentro de la carpeta compartida.</p>
-        <img  class ="picture2" src="samba/archivoyresetsamba.png"   alt="samba9">
+        <img  class ="picture2" src="./samba/archivoyresetsamba.png"   alt="samba9">
         <p>Ya solo nos queda resetear el servicio samba desde root.su enter (contraseña)  systemctl restart smbd.service enter. (Si nos diera error porque no estuviera en ejecución: reload-or-restart)</p>
-        <img  class ="picture2" src="samba/archivoyresetsamba.png"   alt="samba10">
+        <img  class ="picture2" src="./samba/archivoyresetsamba.png"   alt="samba10">
         <p>Ahora miramos la dirección ip de la máquina (la otorga virtualbox) y la anotamos.</p>
-        <img  class ="picture2" src="samba/Pingentre2maquinas.png"   alt="samba11">
+        <img  class ="picture2" src="./samba/Pingentre2maquinas.png"   alt="samba11">
         <p>Nos vamos a Windows Probamos que tenemos la carpeta compartida  entre las dos maquinas.</p>
-        <img  class ="picture2"  src="samba/carpetacompartida.png"  alt="samba12">
+        <img  class ="picture2"  src="./samba/carpetacompartida.png"  alt="samba12">
         <a class="button3" href="index.html">Regresar</a>
     </div>  
 </body>
